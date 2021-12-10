@@ -1,0 +1,65 @@
+:root {
+  --page_width: 1250px;
+  --nav-background-color: #f9f9f9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* navbar */
+nav#top_nav {
+  position: sticky;
+  top: 0;
+  background: var(--nav-background-color);
+}
+.inner_nav {
+  /* get to display at the middle with a max-width of 1250px */
+  width: 100%;
+  max-width: var(--page_width);
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  /* display next to each-other */
+  display: flex;
+  align-items: center;
+}
+.logo {
+  display: block;
+}
+
+.inner_nav .nav_links {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+
+  font-size: 1.3rem;
+
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.nav_links .nav_item {
+  display: block;
+  height: 100px;
+  line-height: 100px;
+  padding: 0 3rem;
+}
+
+/* Header (above the fold) */
+header#top_header {
+}
