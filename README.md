@@ -10,4 +10,4 @@ het Van Gogh Museum.
   
 Wireframe: ![Wireframe](./wireframe/Web-1.png)
   
-Link naar live pagina: *coming soon*.
+[Link](http://32548.hosts1.ma-cloud.nl/Museum-Online/) naar live pagina.
