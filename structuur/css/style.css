@@ -1,6 +1,7 @@
 :root {
   --page_width: 1250px;
   --nav-background-color: #f9f9f9;
+  --nav-text-color: #707070;
 }
 
 html {
@@ -25,6 +26,8 @@ nav#top_nav {
   position: sticky;
   top: 0;
   background: var(--nav-background-color);
+  box-shadow: 0 6px 11px 0px rgba(0, 0, 0, 0.16);
+  z-index: 2;
 }
 .inner_nav {
   /* get to display at the middle with a max-width of 1250px */
@@ -37,7 +40,7 @@ nav#top_nav {
   display: flex;
   align-items: center;
 }
-.logo {
+.logo img {
   display: block;
 }
 
@@ -47,19 +50,89 @@ nav#top_nav {
   margin-bottom: 0;
   margin-left: auto;
 
-  font-size: 1.3rem;
-
+  font-size: 1.7rem;
+  width: 50%;
   display: flex;
   justify-content: space-between;
   list-style-type: none;
 }
-.nav_links .nav_item {
+.nav_links > .nav_item {
   display: block;
+  flex: 1;
+}
+.nav_item > a {
+  display: block;
+  width: 100%;
+  color: var(--nav-text-color);
+  text-decoration: none;
   height: 100px;
   line-height: 100px;
-  padding: 0 3rem;
+  text-align: center;
 }
 
 /* Header (above the fold) */
 header#top_header {
+  height: calc(100vh - 100px);
+  background-image: url("../img/Museum.jfif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+header #header_img_overlay {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-image: linear-gradient(150deg, black 25%, transparent);
+  z-index: 0;
+}
+
+header#top_header .inner_header {
+  position: relative;
+  width: 100%;
+  max-width: var(--page_width);
+  height: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+header#top_header h1 {
+  position: relative;
+  color: var(--nav-background-color);
+  font-size: 2.7rem;
+  max-width: 170px;
+}
+header#top_header #lang_switch {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--nav-background-color);
+  font-size: 1.7rem;
+  text-decoration: none;
+}
+
+header#top_header #down_btn {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 17px;
+  background-color: var(--nav-background-color);
+  /* to center down arrow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#down_btn::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-right: 4px solid black;
+  border-bottom: 4px solid black;
+  border-radius: 3px;
+  transform: rotate(45deg) translate(-15%, -15%);
 }
