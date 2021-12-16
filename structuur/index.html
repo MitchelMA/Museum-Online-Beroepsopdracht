@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -42,7 +42,7 @@
         </ul>
       </div>
     </nav>
-    <header id="top_header" aria-label="Header">
+    <header id="top_header">
       <div id="header_img_overlay"></div>
       <div class="inner_header">
         <a
@@ -58,7 +58,6 @@
     <main>
       <section
         id="interactief"
-        aria-label="Interactief"
         data-section-name="interactief"
         style="position: relative;"
       >
@@ -67,19 +66,17 @@
           style="position: absolute; top: -100px;"
         ></div>
         <h2>Interactief</h2>
-        <div class="grid_display" aria-label="interactief-grid">
+        <div class="grid_display">
           <!-- Dit is de box van de geschiedenis -->
           <div class="grid_item">
             <header class="grid_item_header">
               <h2>Geschiedenis</h2>
             </header>
             <!-- dit is de tekst die je normaal ziet, op dit moment zul je moeten klikken om de volledige tekst te zien -->
-            <section class="grid_item_section">
-              <p>
-                Klik hier als je meer wilt weten over de geschiedenis van het
-                Van Gogh Museum.
-              </p>
-            </section>
+            <p>
+              Klik hier als je meer wilt weten over de geschiedenis van het Van
+              Gogh Museum.
+            </p>
           </div>
           <div class="grid_item">
             slideshow-item
@@ -91,7 +88,7 @@
             <header id="overlay_header">
               <h2>Geschiedenis</h2>
             </header>
-            <section>
+            <div id="overlay_text">
               <p>
                 Vincent van Gogh had in zijn leven slechts twee schilderijen
                 verkocht. Na zijn dood in 1890 liet Vincent zijn complete werk
@@ -130,13 +127,12 @@
                 Met ingang van 1 februari 2020, is Emilie Gordenker directeur
                 van het museum als opvolger van Axel Rüger.
               </p>
-            </section>
+            </div>
           </article>
         </div>
       </section>
       <section
         id="contactinformatie"
-        aria-label="Contactinformatie"
         data-section-name="Contactinformatie"
         style="position: relative;"
       >
@@ -145,7 +141,7 @@
           style="position: absolute; top: -100px;"
         ></div>
         <h2>Contactinformatie</h2>
-        <div class="contact_block" aria-label="Contactgegevens">
+        <div class="contact_block">
           <h3>
             Contactgegevens
           </h3>
@@ -153,11 +149,7 @@
             <img class="aside_text_img" src="./img/placeholder.jpg" alt="" />
             <figcaption>Gebouwsfoto</figcaption>
           </figure>
-          <section
-            class="data_section"
-            style="text-align: left;"
-            aria-label="Contactgegevens informatie"
-          >
+          <section class="data_section" style="text-align: left;">
             <h4>Adres:</h4>
             <p>Museumplein 6<br />1071 DJ Amsterdam</p>
             <h4>Postadres:</h4>
@@ -171,130 +163,139 @@
               Telefoon:&nbsp;<a href="tel:+31205705200">(020) 570 52 00</a>
             </p>
           </section>
-          <br clear="right" />
+          <br style="clear: right;" />
         </div>
-        <div class="contact_block" aria-label="Openingstijden">
+        <div class="contact_block">
           <h3>Openingstijden</h3>
           <figure style="float: left; margin: 0px;">
             <img src="./img/placeholder.jpg" alt="" class="aside_text_img" />
             <figcaption>Foto2</figcaption>
           </figure>
-          <section
-            class="data_section"
-            style="text-align: right;"
-            aria-label="Openingstijden informatie"
-          >
+          <section class="data_section" style="text-align: right;">
             <h4>2022</h4>
-            <span class="date_info" aria-label="datum informatie">
-              <p><strong>1 januari 2022 (nieuwjaarsdag):</strong></p>
-              <ul>
-                <li>Zaterdag: open van 11:00 tot 18:00</li>
-              </ul>
-            </span>
-            <span class="date_info" aria-label="datum informatie">
-              <p><strong>2 tot en met 9 januari 2022:</strong></p>
-              <ul>
-                <li>Dagelijks: open van 09:00 tot 18:00</li>
-              </ul>
-            </span>
-            <span class="date_info" aria-label="datum informatie">
-              <p><strong>10 tot en met 16 januari 2022:</strong></p>
-              <ul>
-                <li>Maandag tot en met vrijdag: open van 10:00 tot 17:00</li>
-                <li>Zaterdag en zondag: open van 10:00 tot 18:00</li>
-              </ul>
-            </span>
-            <span class="date_info" aria-label="datum informatie">
-              <p><strong>17 januarie tot en met 6 februari 2022:</strong></p>
-              <ul>
-                <li>Maandag: gesloten</li>
-                <li>Dinsdag tot en met donderdag: open van 10:00 tot 17:00</li>
-                <li>Vrijdag tot en met zondag: open van 10:00 tot 18:00</li>
-              </ul>
-            </span>
-            <span class="date_info" aria-label="datum informatie">
-              <p><strong>7 tot en met 18 februari 2022:</strong></p>
-              <ul>
-                <li>Maandag: gesloten</li>
-                <li>Dinsdag tot en met donderdag: open van 10:00 tot 17:00</li>
-                <li>Vrijdag tot en met zondag: open van 10:00 tot 18:00</li>
-              </ul>
-            </span>
-            <span class="date_info" aria-label="datum informatie">
-              <p><strong>19 tot en met 27 februari 2022:</strong></p>
-              <ul>
-                <li>Dagelijks: open van 09:00 tot 18:00</li>
-              </ul>
-            </span>
-            <span class="date_info" aria-label="datum informatie">
-              <p><strong>28 februari tot en met 6 maart 2022:</strong></p>
-              <ul>
-                <li>Maandag tot en met donderdag: open van 09:00 tot 17:00</li>
-                <li>
-                  Vrijdag tot en met zondag: open van 09:00 tot en met 18:00
-                </li>
-              </ul>
-            </span>
-            <span class="date_info" aria-label="datum informatie">
-              <p><strong>7 tot en met 31 maart 2022:</strong></p>
-              <ul>
-                <li>Maandag tot en met donderdag: open van 09:00 tot 17:00</li>
-                <li>Vrijdag: open van 10:00 tot 21:00</li>
-                <li>Zaterdag en zondag: open van 10:00 tot 18:00</li>
-              </ul>
-            </span>
+            <p><strong>1 januari 2022 (nieuwjaarsdag):</strong></p>
+            <ul>
+              <li>Zaterdag: open van 11:00 tot 18:00</li>
+            </ul>
+            <p><strong>2 tot en met 9 januari 2022:</strong></p>
+            <ul>
+              <li>Dagelijks: open van 09:00 tot 18:00</li>
+            </ul>
+            <p><strong>10 tot en met 16 januari 2022:</strong></p>
+            <ul>
+              <li>Maandag tot en met vrijdag: open van 10:00 tot 17:00</li>
+              <li>Zaterdag en zondag: open van 10:00 tot 18:00</li>
+            </ul>
+            <p><strong>17 januarie tot en met 6 februari 2022:</strong></p>
+            <ul>
+              <li>Maandag: gesloten</li>
+              <li>Dinsdag tot en met donderdag: open van 10:00 tot 17:00</li>
+              <li>Vrijdag tot en met zondag: open van 10:00 tot 18:00</li>
+            </ul>
+            <p><strong>7 tot en met 18 februari 2022:</strong></p>
+            <ul>
+              <li>Maandag: gesloten</li>
+              <li>Dinsdag tot en met donderdag: open van 10:00 tot 17:00</li>
+              <li>Vrijdag tot en met zondag: open van 10:00 tot 18:00</li>
+            </ul>
+            <p><strong>19 tot en met 27 februari 2022:</strong></p>
+            <ul>
+              <li>Dagelijks: open van 09:00 tot 18:00</li>
+            </ul>
+            <p><strong>28 februari tot en met 6 maart 2022:</strong></p>
+            <ul>
+              <li>Maandag tot en met donderdag: open van 09:00 tot 17:00</li>
+              <li>
+                Vrijdag tot en met zondag: open van 09:00 tot en met 18:00
+              </li>
+            </ul>
+            <p><strong>7 tot en met 31 maart 2022:</strong></p>
+            <ul>
+              <li>Maandag tot en met donderdag: open van 09:00 tot 17:00</li>
+              <li>Vrijdag: open van 10:00 tot 21:00</li>
+              <li>Zaterdag en zondag: open van 10:00 tot 18:00</li>
+            </ul>
           </section>
-          <br clear="left" />
+          <br style="clear: left;" />
         </div>
       </section>
       <section
         id="reviews"
-        aria-label="Reviews"
         data-section-name="Reviews"
         style="position: relative;"
       >
         <div id="reviewsAnchor" style="position: absolute; top: -100px;"></div>
         <h3>Reviews</h3>
         <div class="review_container">
-          <section class="review_item" aria-label="Review">
-            <div class="profile" aria-label="Profiel">
+          <section class="review_item">
+            <div class="profile">
               <img src="" alt="Profiel-afbeelding" class="profile_img" />
-              <span class="profile_name" aria-label="Profiel-naam">Naam</span>
+              <span class="profile_name">Evi-David</span>
             </div>
-            <div class="text-container" aria-label="Review-tekst">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-              officiis quod quaerat sit, inventore facilis explicabo possimus
-              quo atque veniam officia pariatur ratione voluptates cumque.
+            <div class="text-container">
+              <span class="date">16 november 2021</span>
+              <span class="rating">5 van de 5</span>
+              <h4>Een aanrader!</h4>
+              <p>
+                Een topmuseum. Heel aangenaam verrast, moet je echt doen als je
+                naar Amsterdam gaat! De audiotour is echt top: bij elk
+                schilderij waarbij iets van informatie is voorzien, staat een
+                nummer waarnaar je dan kan scrollen. Heel leuk! Ook een leuke
+                shop, met toffe, betaalbare souvenirs!
+              </p>
             </div>
           </section>
-          <section class="review_item" aria-label="Review">
-            <div class="profile" aria-label="Profiel">
+          <section class="review_item">
+            <div class="profile">
               <img src="" alt="profiel-afbeelding" class="profile_img" />
-              <span class="profile_name" aria-label="Profiel-naam">Naam</span>
+              <span class="profile_name">Polarlys</span>
             </div>
-            <div class="text_container" aria-label="Review-tekst">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
-              laborum nemo labore sit natus amet similique quam cupiditate
-              provident reiciendis.
+            <div class="text_container">
+              <span class="date">27 oktober 2021</span>
+              <span class="rating">5 van de 5 sterren</span>
+              <h4>Doen!</h4>
+              <p>
+                Zeer ruim opgezet. Wel een tijdslot reserveren, wekt prima.
+                Behalve werken van van Gogh, ook werken van zijn vrienden te
+                zien
+              </p>
             </div>
           </section>
-          <section class="review_item" aria-label="Review">
-            <div class="profile" aria-label="Profiel">
+          <section class="review_item">
+            <div class="profile">
               <img src="" alt="Profiel-afbeelding" class="profile_img" />
-              <span class="profile_name" aria-label="Profiel-naam">Naam</span>
+              <span class="profile_name">Johanna Anne Bannink</span>
             </div>
-            <div class="text_container" aria-label="Review-tekst">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Voluptatem dolor sit veritatis totam perferendis labore molestias
-              dignissimos reiciendis, animi eius quas atque soluta accusantium
-              rerum doloribus rem, pariatur fuga harum beatae eveniet sint?
-              Quisquam, in.
+            <div class="text_container">
+              <span class="date">21 juni 2021</span>
+              <span class="rating">5 van de 5 sterren</span>
+              <h4>Geweldig!</h4>
+              <p>
+                Een bijzondere ervaring! Heel erg interessant om Van Gogh zijn
+                schilderijen te kunenn zien. Een heel bijzonder levensverhaal!
+              </p>
+            </div>
+          </section>
+          <section class="review_item">
+            <div class="profile">
+              <img src="" alt="Profiel-afbeelding" class="profile_img" />
+              <span class="profile_name">Han v</span>
+            </div>
+            <div class="text_container">
+              <span class="date">32 mei 2021</span>
+              <span class="rating">5 van de 5 sterren</span>
+              <h4>Uniek museum</h4>
+              <p>
+                Prachtige collectie van schilderijen en tekeningen van Van Gogh
+                en z'n tijdgenoten. Het geeft een goede indruk van interessante
+                ontwikkelingen in de kunst. Dit museum blijft bloeien.
+              </p>
             </div>
           </section>
         </div>
       </section>
     </main>
-    <footer id="bottom_footer" aria-label="Footer">
+    <footer id="bottom_footer">
       <h2>Footer</h2>
     </footer>
   </body>
