@@ -31,13 +31,13 @@
         </a>
         <ul class="nav_links" aria-label="Linken">
           <li class="nav_item">
-            <a href="#interactief">Interactief</a>
+            <a href="#interactiefAnchor">Interactief</a>
           </li>
           <li class="nav_item">
-            <a href="#contactinformatie">Informatie</a>
+            <a href="#contactinformatieAnchor">Informatie</a>
           </li>
           <li class="nav_item">
-            <a href="#reviews">Reviews</a>
+            <a href="#reviewsAnchor">Reviews</a>
           </li>
         </ul>
       </div>
@@ -60,7 +60,12 @@
         id="interactief"
         aria-label="Interactief"
         data-section-name="interactief"
+        style="position: relative;"
       >
+        <div
+          id="interactiefAnchor"
+          style="position: absolute; top: -100px;"
+        ></div>
         <h2>Interactief</h2>
         <div class="grid_display" aria-label="interactief-grid">
           <!-- Dit is de box van de geschiedenis -->
@@ -133,32 +138,122 @@
         id="contactinformatie"
         aria-label="Contactinformatie"
         data-section-name="Contactinformatie"
+        style="position: relative;"
       >
+        <div
+          id="contactinformatieAnchor"
+          style="position: absolute; top: -100px;"
+        ></div>
         <h2>Contactinformatie</h2>
         <div class="contact_block" aria-label="Contactgegevens">
           <h3>
             Contactgegevens
           </h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Exercitationem, doloribus a magnam distinctio accusantium
-            laudantium, debitis voluptatum aperiam consequuntur perspiciatis
-            fugit. Numquam beatae aperiam velit odio nisi harum soluta sint?
-          </p>
-          <img src="" alt="gebouwsfoto" class="aside_text_img" />
+          <figure style="float: right; margin: 0px;">
+            <img class="aside_text_img" src="./img/placeholder.jpg" alt="" />
+            <figcaption>Gebouwsfoto</figcaption>
+          </figure>
+          <section
+            class="data_section"
+            style="text-align: left;"
+            aria-label="Contactgegevens informatie"
+          >
+            <h4>Adres:</h4>
+            <p>Museumplein 6<br />1071 DJ Amsterdam</p>
+            <h4>Postadres:</h4>
+            <p>Van Gogh Museum<br />Postbus 75366<br />1070 AJ Amsterdam</p>
+            <h4>Andere mogelijkheden:</h4>
+            <p>
+              E-mail:&nbsp;<a href="mailto:info@vangoghmuseum.nl"
+                >info@vangoghmuseum.nl</a
+              >
+              <br />
+              Telefoon:&nbsp;<a href="tel:+31205705200">(020) 570 52 00</a>
+            </p>
+          </section>
+          <br clear="right" />
         </div>
         <div class="contact_block" aria-label="Openingstijden">
           <h3>Openingstijden</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil vel
-            alias soluta et deleniti dicta quibusdam laborum reiciendis,
-            asperiores adipisci dignissimos optio eum eaque omnis laudantium
-            animi, iste quisquam temporibus!
-          </p>
-          <img src="" alt="foto2" class="aside_text_img" />
+          <figure style="float: left; margin: 0px;">
+            <img src="./img/placeholder.jpg" alt="" class="aside_text_img" />
+            <figcaption>Foto2</figcaption>
+          </figure>
+          <section
+            class="data_section"
+            style="text-align: right;"
+            aria-label="Openingstijden informatie"
+          >
+            <h4>2022</h4>
+            <span class="date_info" aria-label="datum informatie">
+              <p><strong>1 januari 2022 (nieuwjaarsdag):</strong></p>
+              <ul>
+                <li>Zaterdag: open van 11:00 tot 18:00</li>
+              </ul>
+            </span>
+            <span class="date_info" aria-label="datum informatie">
+              <p><strong>2 tot en met 9 januari 2022:</strong></p>
+              <ul>
+                <li>Dagelijks: open van 09:00 tot 18:00</li>
+              </ul>
+            </span>
+            <span class="date_info" aria-label="datum informatie">
+              <p><strong>10 tot en met 16 januari 2022:</strong></p>
+              <ul>
+                <li>Maandag tot en met vrijdag: open van 10:00 tot 17:00</li>
+                <li>Zaterdag en zondag: open van 10:00 tot 18:00</li>
+              </ul>
+            </span>
+            <span class="date_info" aria-label="datum informatie">
+              <p><strong>17 januarie tot en met 6 februari 2022:</strong></p>
+              <ul>
+                <li>Maandag: gesloten</li>
+                <li>Dinsdag tot en met donderdag: open van 10:00 tot 17:00</li>
+                <li>Vrijdag tot en met zondag: open van 10:00 tot 18:00</li>
+              </ul>
+            </span>
+            <span class="date_info" aria-label="datum informatie">
+              <p><strong>7 tot en met 18 februari 2022:</strong></p>
+              <ul>
+                <li>Maandag: gesloten</li>
+                <li>Dinsdag tot en met donderdag: open van 10:00 tot 17:00</li>
+                <li>Vrijdag tot en met zondag: open van 10:00 tot 18:00</li>
+              </ul>
+            </span>
+            <span class="date_info" aria-label="datum informatie">
+              <p><strong>19 tot en met 27 februari 2022:</strong></p>
+              <ul>
+                <li>Dagelijks: open van 09:00 tot 18:00</li>
+              </ul>
+            </span>
+            <span class="date_info" aria-label="datum informatie">
+              <p><strong>28 februari tot en met 6 maart 2022:</strong></p>
+              <ul>
+                <li>Maandag tot en met donderdag: open van 09:00 tot 17:00</li>
+                <li>
+                  Vrijdag tot en met zondag: open van 09:00 tot en met 18:00
+                </li>
+              </ul>
+            </span>
+            <span class="date_info" aria-label="datum informatie">
+              <p><strong>7 tot en met 31 maart 2022:</strong></p>
+              <ul>
+                <li>Maandag tot en met donderdag: open van 09:00 tot 17:00</li>
+                <li>Vrijdag: open van 10:00 tot 21:00</li>
+                <li>Zaterdag en zondag: open van 10:00 tot 18:00</li>
+              </ul>
+            </span>
+          </section>
+          <br clear="left" />
         </div>
       </section>
-      <section id="reviews" aria-label="Reviews" data-section-name="Reviews">
+      <section
+        id="reviews"
+        aria-label="Reviews"
+        data-section-name="Reviews"
+        style="position: relative;"
+      >
+        <div id="reviewsAnchor" style="position: absolute; top: -100px;"></div>
         <h3>Reviews</h3>
         <div class="review_container">
           <section class="review_item" aria-label="Review">
