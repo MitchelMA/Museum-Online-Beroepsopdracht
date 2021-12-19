@@ -2,6 +2,10 @@
   --page_width: 1250px;
   --nav-background-color: #f9f9f9;
   --nav-text-color: #707070;
+
+  /* for the footer */
+  --footer-background-color: #444;
+  --footer-text-color: #f9f9f9;
 }
 
 html {
@@ -19,6 +23,18 @@ html {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* clearfix */
+.clearfix::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* navbar */
@@ -135,4 +151,27 @@ header#top_header #down_btn {
   border-bottom: 6px solid black;
   border-radius: 6px;
   transform: rotate(45deg) translate(-15%, -15%);
+}
+
+/* main page content */
+
+main.page_content {
+  width: 100%;
+  max-width: var(--page_width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* footer */
+
+footer#bottom_footer {
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
+}
+
+footer#bottom_footer .inner_footer {
+  width: 100%;
+  max-width: var(--page_width);
+  margin: 0 auto;
+  padding: 1rem;
 }
