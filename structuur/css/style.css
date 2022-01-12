@@ -168,7 +168,7 @@ ul#tentoonstelling_selection {
   display: flex;
   padding: 0;
   list-style: none;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 ul#tentoonstelling_selection li {
