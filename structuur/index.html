@@ -255,13 +255,20 @@
           <div class="grid_item">
             slideshow-item
           </div>
-          <div class="grid_item span_2">
+          <div class="grid_item span_2" id="inter">
             interactief-item
           </div>
-          <article id="geschiedenis_overlay">
+          <article id="geschiedenis_overlay" class="open">
             <header id="overlay_header">
               <h3>Geschiedenis</h3>
             </header>
+            <button
+              id="close"
+              aria-label="close"
+              onclick="this.parentElement.classList.remove(`open`);"
+            >
+              &times;
+            </button>
             <div id="overlay_text">
               <p>
                 Vincent van Gogh had in zijn leven slechts twee schilderijen

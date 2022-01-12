@@ -162,6 +162,10 @@ main.page_content {
   padding: 0 1rem;
 }
 
+.page_content > section > h2 {
+  font-size: calc(1.3 * 1.5rem);
+}
+
 /* Huidig tentoonstelling */
 ul#tentoonstelling_selection {
   width: 100%;
@@ -198,6 +202,61 @@ section#total_tentoonstelling section img {
   height: auto;
   background-position: center center;
   object-fit: contain;
+}
+
+/* Interactief onderdeel */
+section#interactief {
+  font-size: 1.3em;
+}
+.grid_display {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 9rem;
+  position: relative;
+}
+.grid_display .span_2 {
+  grid-column: auto / span 2;
+}
+
+.grid_item {
+  height: 300px;
+  background-color: #555;
+  padding: 1rem;
+}
+
+#inter {
+  aspect-ratio: 16 / 7;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  justify-self: center;
+}
+
+article#geschiedenis_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #555;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease 0s;
+}
+article#geschiedenis_overlay.open {
+  pointer-events: all;
+  opacity: 1;
+}
+article#geschiedenis_overlay #close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 2rem;
+  user-select: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0px;
 }
 
 /* footer */
