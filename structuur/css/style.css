@@ -162,6 +162,10 @@ main.page_content {
   padding: 0 1rem;
 }
 
+.page_content > section {
+  margin-top: 4rem;
+}
+
 .page_content > section > h2 {
   font-size: calc(1.3 * 1.5rem);
 }
@@ -266,6 +270,105 @@ article#geschiedenis_overlay #close {
   cursor: pointer;
   background-color: transparent;
   border: 0px;
+}
+
+/* Contactinfomatie */
+section#contactinformatie {
+  font-size: 1.3em;
+}
+
+.contact_block ul {
+  list-style: none;
+}
+
+/* reviews */
+.review_container {
+  overflow: hidden;
+  height: 700px;
+  position: relative;
+}
+
+.review_item {
+  width: 300px;
+  border-radius: 7px;
+  border: 3px solid #888;
+  background-color: whitesmoke;
+  font-size: 1.3em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 250ms ease 0s, left 250ms ease 0s;
+}
+
+.review_item .profile {
+  width: 100%;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #888;
+  padding: 0 0.5rem;
+}
+.review_item .profile > .profile_img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgb(100, 100, 100);
+  object-fit: cover;
+}
+.review_item .profile > .profile_name {
+  margin: auto;
+}
+
+.review_item .text_container {
+  padding: 1rem;
+}
+
+.review_container #rev_prev,
+.review_container #rev_next {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: whitesmoke;
+  border: 0px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.review_container #rev_prev::before,
+.review_container #rev_next::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  background: transparent;
+  left: 35%;
+  z-index: 1;
+}
+
+.review_container #rev_prev::before {
+  border-left: 5px solid black;
+  border-bottom: 5px solid black;
+  transform: rotate(45deg);
+}
+
+.review_container #rev_next::before {
+  border-right: 5px solid black;
+  border-top: 5px solid black;
+  left: 20%;
+  transform: rotate(45deg);
+}
+
+.review_container #rev_prev {
+  left: 33%;
+}
+.review_container #rev_next {
+  right: 33%;
 }
 
 /* footer */
