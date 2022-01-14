@@ -519,6 +519,7 @@ footer#bottom_footer .inner_footer {
   height: 100vh;
   pointer-events: none;
   z-index: -1;
+  transition: backdrop-filter 250ms ease 0s;
 }
 
 #bigTentoon.open {
