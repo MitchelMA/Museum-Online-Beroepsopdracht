@@ -43,7 +43,11 @@
             <a href="#reviewsAnchor">Reviews</a>
           </li>
         </ul>
-        <button id="nav-burger">
+        <button
+          aria-label="Navigation burger"
+          id="nav-burger"
+          onclick="this.previousElementSibling.classList.toggle('open');"
+        >
           <span></span>
         </button>
       </div>
