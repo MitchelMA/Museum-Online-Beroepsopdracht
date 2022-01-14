@@ -340,6 +340,7 @@ section#interactief {
 }
 
 .grid_item {
+  max-width: calc(100vw - 2rem);
   height: 300px;
   background-color: var(--interactive-box-background-color);
   padding: 1rem;
