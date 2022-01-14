@@ -229,6 +229,10 @@
             />
           </section>
         </section>
+        <p>
+          Dit is niet de totale collectie, in het Van Gogh Museum zijn nog veel
+          meer werken van Van Gogh.
+        </p>
       </section>
       <section
         id="interactief"
@@ -248,17 +252,22 @@
             </header>
             <!-- dit is de tekst die je normaal ziet, op dit moment zul je moeten klikken om de volledige tekst te zien -->
             <p>
-              Klik hier als je meer wilt weten over de geschiedenis van het Van
-              Gogh Museum.
+              Vincent van Gogh had in zijn leven slechts twee schilderijen
+              verkocht. Na zijn dood in 1890 liet Vincent zijn complete werk na
+              aan zijn...
+              <button
+                style="font-size: 1.3rem; margin-top: 1rem;"
+                onclick="document.getElementById('geschiedenis_overlay').classList.add('open');"
+              >
+                klik hier voor meer
+              </button>
             </p>
           </div>
-          <div class="grid_item">
-            slideshow-item
-          </div>
+          <div class="grid_item" id="slideshow_item"></div>
           <div class="grid_item span_2" id="inter">
             interactief-item
           </div>
-          <article id="geschiedenis_overlay" class="open">
+          <article id="geschiedenis_overlay" class="">
             <header id="overlay_header">
               <h3>Geschiedenis</h3>
             </header>
@@ -567,6 +576,14 @@
         >
       </section>
     </footer>
+    <!-- modal overlay wanneer er wordt gedrukt op een tentoonstelling werkstuk -->
+    <section id="bigTentoon" class="">
+      <button id="close" onclick="closeOverlay();">
+        &times;
+      </button>
+      <img id="bigTentoonImg" src="" alt="" />
+    </section>
     <script src="./js/reviews.js"></script>
+    <script src="./js/tentoon.js"></script>
   </body>
 </html>

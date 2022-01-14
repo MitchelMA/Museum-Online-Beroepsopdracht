@@ -1,3 +1,4 @@
+// javascript voor de reviews
 let reviewContainer = document.querySelector(".review_container");
 let curRevIndex = 1;
 let reviews = reviewContainer.querySelectorAll(".review_item");
