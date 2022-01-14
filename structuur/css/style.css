@@ -338,7 +338,7 @@ article#geschiedenis_overlay.open {
   -webkit-box-shadow: 3px 8px 12px rgba(0, 0, 0, 0.2);
   border-collapse: separate;
 }
-article#geschiedenis_overlay #close {
+article#geschiedenis_overlay .close {
   position: absolute;
   top: 30px;
   right: 30px;
@@ -529,7 +529,7 @@ footer#bottom_footer .inner_footer {
   z-index: 2;
 }
 
-#bigTentoon #close {
+#bigTentoon .close {
   position: absolute;
   top: 2rem;
   right: 2rem;
