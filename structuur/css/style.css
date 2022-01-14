@@ -123,6 +123,44 @@ nav#top_nav {
   text-align: center;
 }
 
+.inner_nav #nav-burger {
+  margin-left: auto;
+  display: none;
+  height: 45px;
+  width: 45px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+#nav-burger span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: var(--nav-text-color);
+  position: relative;
+}
+#nav-burger span::before {
+  content: "";
+  position: relative;
+  display: block;
+  width: inherit;
+  height: inherit;
+  background-color: inherit;
+  bottom: 8px;
+}
+#nav-burger span::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: inherit;
+  height: inherit;
+  background-color: inherit;
+  top: 5px;
+}
+#nav-burger:hover {
+  background: transparent;
+}
+
 /* Header (above the fold) */
 header#top_header {
   height: calc(100vh - 100px);
@@ -238,6 +276,7 @@ ul#tentoonstelling_selection {
   padding: 0;
   list-style: none;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 ul#tentoonstelling_selection li {
@@ -559,4 +598,52 @@ footer#bottom_footer .inner_footer {
   width: auto;
   height: auto;
   max-height: 70vh;
+}
+
+/* media querys */
+@media screen and (max-width: 1000px) {
+  .review_container {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .review_item {
+    position: relative;
+    transform: unset !important;
+    left: 0px !important;
+  }
+  .review_container #rev_prev,
+  .review_container #rev_next {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  .inner_nav .nav_links {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    height: calc(100vh - 100px);
+    width: 300px;
+    flex-flow: column;
+    background: var(--nav-background-color);
+    z-index: 0;
+    transform: translateX(100%);
+    transition: transform 250ms ease 0s;
+  }
+  .inner_nav .nav_links.open {
+    transform: translateX(0);
+  }
+  .inner_nav #nav-burger {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .grid_display {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .grid_display .span_2 {
+    grid-column: auto;
+  }
 }
