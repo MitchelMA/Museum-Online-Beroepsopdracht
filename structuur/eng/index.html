@@ -24,12 +24,12 @@
     <title>Structuur (ENG)</title>
   </head>
   <body>
-    <nav id="top_nav" aria-label="Navigatie-balk">
+    <nav id="top_nav" aria-label="Navigation">
       <div class="inner_nav">
         <a href="#" class="logo" aria-label="Logo">
           <img src="../img/logo.png" alt="Logo" class="logo_img" height="100" />
         </a>
-        <ul class="nav_links" aria-label="Linken">
+        <ul class="nav_links" aria-label="Links">
           <li class="nav_item">
             <a href="#tentoonstellingAnchor">Exhibition</a>
           </li>
@@ -53,7 +53,7 @@
       </div>
       <a
         href="#tentoonstellingAnchor"
-        aria-label="Knop naar beneden"
+        aria-label="Button to go down"
         id="down_btn"
       ></a>
     </header>
@@ -267,7 +267,7 @@
             </header>
             <button
               class="close"
-              aria-label="close"
+              aria-label="close button"
               onclick="this.parentElement.classList.remove(`open`);"
             >
               &times;
@@ -558,8 +558,8 @@
               </p>
             </div>
           </section>
-          <button aria-label="vorige review" id="rev_prev"></button>
-          <button aria-label="volgende review" id="rev_next"></button>
+          <button aria-label="Previous review" id="rev_prev"></button>
+          <button aria-label="Next review" id="rev_next"></button>
         </div>
       </section>
     </main>
@@ -575,7 +575,7 @@
     </footer>
     <!-- modal overlay wanneer er wordt gedrukt op een tentoonstelling werkstuk -->
     <section id="bigTentoon" class="">
-      <button class="close" onclick="closeOverlay();">
+      <button aria-label="close button" class="close" onclick="closeOverlay();">
         &times;
       </button>
       <img id="bigTentoonImg" src="../img/placeholder.jpg" alt="" />
