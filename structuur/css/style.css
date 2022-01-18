@@ -443,7 +443,7 @@ section#contactinformatie {
 /* reviews */
 .review_container {
   overflow: hidden;
-  height: 700px;
+  height: 450px;
   position: relative;
 }
 
@@ -550,6 +550,33 @@ footer#bottom_footer .inner_footer {
   padding: 1rem;
 }
 
+/* ticketverkoop knop */
+.ticketcontainer {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.ticketbtn {
+  font-size: 2.4rem;
+  color: var(--main-content-btn-background-color);
+  padding: 0.3rem 0.7rem;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 5px solid black;
+  cursor: pointer;
+  transition: background-color 250ms ease 0s, color 250ms ease 0s;
+  font-weight: bold;
+}
+.ticketbtn svg {
+  transition: margin-left 150ms ease 0s;
+}
+.ticketbtn:hover svg {
+  margin-left: 1rem !important;
+}
+
 /* big tentoon overlay */
 #bigTentoon {
   position: fixed;
@@ -607,11 +634,13 @@ footer#bottom_footer .inner_footer {
     height: auto;
     display: flex;
     flex-wrap: wrap;
+    gap: 40px;
   }
   .review_item {
     position: relative;
     transform: unset !important;
     left: 0px !important;
+    flex-grow: 1;
   }
   .review_container #rev_prev,
   .review_container #rev_next {
