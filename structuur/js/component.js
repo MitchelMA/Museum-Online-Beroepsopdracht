@@ -9,7 +9,7 @@ class Game extends HTMLElement {
     shadowRoot.appendChild(templateContent.cloneNode(true));
     this.map_container;
     this.text_overlay;
-    this.current_floor = "Floor 1";
+    this.current_floor = "Floor 0";
     this.floor_index = Object.keys(Game.map_point_data.floor_data).indexOf(
       this.current_floor
     );
@@ -44,13 +44,13 @@ class Game extends HTMLElement {
       path_points: {
         "Floor 0": [
           {
-            name: "Ruimte een",
+            name: "Zelfportretten",
             size: 4,
             cords: {
               x: 47,
               y: 53,
             },
-            short_text: "Ruimte 1",
+            short_text: "Zelfportretten",
             point_image: [
               "./img/tentoonstelling/verdieping_0/vangoghmuseum-s0273V1962-800.jpg",
               "./img/tentoonstelling/verdieping_0/vangoghmuseum-s0022V1962-800.jpg",
@@ -70,20 +70,20 @@ class Game extends HTMLElement {
               "Op deze foto zie je het schilderspalet van Van Gogh.",
               "Er zijn maar weinig mensen die weten dat Van Gogh ook korte tijd lesgaf aan amateurschilders.",
               "In lichte zomerse kleding kijkt de kunstenaar ons onderzoekend aan, met één blauw en één groen oog. Voor dit zelfportret gebruikte Van Gogh een goedkope drager: karton.",
-              "Vogelnest",
+              "Vogelnesten",
               "Minstens 50 verschillende koppen wilde Van Gogh schilderen, om te oefenen met boerentypes. Hij begon ermee in oktober 1884, op aanraden van een bevriende collega.",
             ],
           },
         ],
         "Floor 1": [
           {
-            name: "Ruimte 1, verdieping 1",
-            size: 4,
+            name: "Van Goghs Voorbeelden",
+            size: 3,
             cords: {
               x: 25,
               y: 62,
             },
-            short_text: "Ruimte 1, verdieping 1",
+            short_text: "Voorbeelden",
             point_image: [
               "./img/tentoonstelling/verdieping_1/vangoghmuseum-s0424M1991-800.jpg",
               "./img/tentoonstelling/verdieping_1/vangoghmuseum-s0416N1990-800.jpg",
@@ -94,13 +94,13 @@ class Game extends HTMLElement {
             ],
           },
           {
-            name: "Ruimte 2, verdieping 1",
-            size: 4,
+            name: "Boerenschilder",
+            size: 3,
             cords: {
               x: 30,
               y: 22.5,
             },
-            short_text: "Ruimte 2",
+            short_text: "Boerenschilder",
             point_image: [
               "./img/tentoonstelling/verdieping_1/vangoghmuseum-s0129V1962-800.jpg",
               "./img/tentoonstelling/verdieping_1/vangoghmuseum-s0003V1962-800.jpg",
@@ -125,24 +125,142 @@ class Game extends HTMLElement {
             ],
           },
           {
-            name: "Ruimte 3, verdieping 1",
-            size: 4,
+            name: "Bloeiperiode",
+            size: 3,
             cords: {
               x: 77,
               y: 56,
             },
-            short_text: "Ruimte 3",
+            short_text: "Bloeiperiode",
             point_image: [
               "./img/tentoonstelling/verdieping_1/vangoghmuseum-s0177V1962-800.jpg",
               "./img/tentoonstelling/verdieping_1/vangoghmuseum-s0186V1962-800.jpg",
               "./img/tentoonstelling/verdieping_1/vangoghmuseum-s0016V1962-800.jpg",
               "./img/tentoonstelling/verdieping_1/vangoghmuseum-s0019V1962-800.jpg",
+              "./img/tentoonstelling/verdieping_1/vangoghmuseum-s0026V1962-800.jpg",
+              "./img/tentoonstelling/verdieping_1/vangoghmuseum-s0024V1962-800.jpg",
+              "./img/tentoonstelling/verdieping_1/vangoghmuseum-s0031V1962-800.jpg",
+              "./img/tentoonstelling/verdieping_1/vangoghmuseum-s0047V1962-800.jpg",
+              "./img/tentoonstelling/verdieping_1/vangoghmuseum-s0115V1962-800.jpg",
             ],
             text_data: [
               "Van Gogh was nooit zuinig met verf geweest. Maar nadat hij in juni 1886 kennismaakte met de bloemstillevens van Adolphe Monticelli (1824-1886) ging hij een stapje verder.",
               "Dit cafétafeltje met uitzicht schilderde Van Gogh met sterk verdunde olieverf en dunne penselen. Die techniek heet peinture à l'essence.",
               "Van Gogh schilderde dit zelfportret in de winter van 1887-1888, toen hij al bijna twee jaar in Parijs woonde.",
               "Dit zonovergoten parkgezicht noemde Van Gogh zelf 'het schilderij van de tuin met geliefden'.",
+              "Toen Van Gogh in februari 1888 in Arles aankwam, was het nog volop winter. Na enkele weken brak de lente aan. Vol geestdrift begon hij aan een reeks studies van bomen in bloesem.",
+              "Van Gogh koos het perspectief zo dat je omhoogkijkt, tegen de wirwar van takken aan. Als kijker heb je het gevoel midden tussen de bloeiende bomen te staan.",
+              "De Zonnebloemen behoren tot de bekendste schilderijen van Van Gogh. Hij maakte ze in Arles, in Zuid-Frankrijk, in 1888 en 1889.",
+              "In Arles maakte Van Gogh dit schilderij van zijn slaapkamer in het Gele Huis. Hij had de kamer zelf ingericht met eenvoudige meubels en zijn eigen werk aan de muur.",
+              "Van Gogh had een grote bewondering voor Japanse kunst. Hij werd er gelukkig en vrolijk van, schreef hij. Hij maakte drie schilderijen naar Japanse prenten uit zijn eigen verzameling.",
+            ],
+          },
+        ],
+        "Floor 2": [
+          {
+            name: "Van Gogh tekenaar",
+            size: 3,
+            cords: {
+              x: 19,
+              y: 85,
+            },
+            short_text: "Tekenaar",
+            point_image: [
+              "./img/tentoonstelling/verdieping_2/vangoghmuseum-d0074V1962-800.jpg",
+              "./img/tentoonstelling/verdieping_2/vangoghmuseum-d0387V1977-800.jpg",
+              "./img/tentoonstelling/verdieping_2/vangoghmuseum-s0073V1962-800.jpg",
+            ],
+            text_data: [
+              "Naaiende vrouw met meisje",
+              "Garenspoelende man",
+              "Garenspoelende vrouw",
+            ],
+          },
+          {
+            name: "Vrienden in Pont-Aven",
+            size: 3,
+            cords: {
+              x: 34,
+              y: 33,
+            },
+            short_text: "Vrienden",
+            point_image: [
+              "./img/tentoonstelling/verdieping_2/vangoghmuseum-s0039V1962-800.jpg",
+              "./img/tentoonstelling/verdieping_2/vangoghmuseum-s0225V1962-800.jpg",
+            ],
+            text_data: [
+              "De knoestige stam en takken van dit kleine perenboompje steken af tegen de lichte ondergrond. Van Gogh was verrukt van de bloeiende fruitbomen in de Provence. Hij maakte dan ook een hele reeks schilderijen van de bomen in bloesem.",
+              "Portretteerde Gauguin hier werkelijk zijn vriend Van Gogh terwijl die een vaas zonnebloemen schilderde? Nee, zeker niet: het was december en het bloeiseizoen was allang voorbij.",
+            ],
+          },
+          {
+            name: "Familieschatten",
+            size: 3,
+            cords: {
+              x: 66,
+              y: 85,
+            },
+            short_text: "Familieschatten",
+            point_image: [
+              "./img/tentoonstelling/verdieping_2/vangoghmuseum-s0157V1962-800.jpg",
+              "./img/tentoonstelling/verdieping_2/vangoghmuseum-s0071V1962v-800.jpg",
+            ],
+            text_data: [
+              "Lang is gedacht dat dit een zelfportret was, maar een andere opvatting is dat het hier gaat om een portret van Vincents broer Theo. De broers leken namelijk veel op elkaar.",
+              "Voor dit zelfportret gebruikte Van Gogh vele tinten blauw. In de achtergrond, maar ook in zijn gezicht: zelfs zijn oogwit maakte hij blauw.",
+            ],
+          },
+        ],
+        "Floor 3": [
+          {
+            name: "Schilderen ondanks alles",
+            size: 3,
+            cords: {
+              x: 54,
+              y: 85,
+            },
+            short_text: "Ondanks alles",
+            point_image: [
+              "./img/tentoonstelling/verdieping_3/vangoghmuseum-s0188V1962-800.jpg",
+              "./img/tentoonstelling/verdieping_3/vangoghmuseum-s0050V1962-800.jpg",
+              "./img/tentoonstelling/verdieping_3/vangoghmuseum-s0196V1962-800.jpg",
+              "./img/tentoonstelling/verdieping_3/vangoghmuseum-s0149V1962-800.jpg",
+            ],
+            text_data: [
+              "Het is goed te zien hoe Van Gogh dit doek schilderde: eerst de bloemen en de vlinders, daarna pas de blauwe achtergrond.",
+              "Van Gogh schilderde dit stilleven in de inrichting in Saint-Rémy. Het schilderij was voor hem in de eerste plaats een kleurstudie. Hij zocht naar een krachtig kleurcontrast.",
+              "Dit schilderij toont de tuin van de inrichting in Saint-Rémy waar Van Gogh een jaar was opgenomen. Hij werkte er regelmatig als hij door zijn ziekte het terrein niet mocht verlaten.",
+              "Korenveld met kraaien is één van de beroemdste schilderijen van Van Gogh.",
+            ],
+          },
+          {
+            name: "Bezielde natuur",
+            size: 3,
+            cords: {
+              x: 30,
+              y: 34,
+            },
+            short_text: "Bezielde natuur",
+            point_image: [
+              "./img/tentoonstelling/verdieping_3/vangoghmuseum-s0195V1962-800.jpg",
+            ],
+            text_data: [
+              "Op het eerste gezicht lijkt dit schilderij een wirwar van bonte kleuren en grillige, abstracte vormen. Pas daarna zie je dat het een helling met boomstammen en -wortels voorstelt.",
+            ],
+          },
+          {
+            name: "De Amandelbloesem",
+            size: 3,
+            cords: {
+              x: 19,
+              y: 85,
+            },
+            short_text: "Amandelbloesem",
+            point_image: [
+              "./img/tentoonstelling/verdieping_3/vangoghmuseum-s0176V1962-800.jpg",
+            ],
+            text_data: [
+              "Hier schilderde Van Gogh een van zijn lievelingsonderwerpen: grote bloeiende takken tegen een blauwe lucht. Omdat de amandelboom al vroeg in het voorjaar bloeit, is het een symbool voor nieuw leven.",
             ],
           },
         ],
@@ -322,6 +440,9 @@ class Game extends HTMLElement {
       partSec.appendChild(partSecImg);
       text_overlay.querySelector("#main_point_content").appendChild(partSec);
     }
+
+    // set scroll to 0
+    text_overlay.querySelector(".inner > .content").scrollTop = 0;
   }
 
   changeFloor(nextFloor) {
@@ -418,5 +539,4 @@ class Pop extends HTMLElement {
   }
 }
 
-window.customElements.define("game-element", Game);
 window.customElements.define("small-pop-point", Pop);

@@ -57,12 +57,37 @@
       <div class="inner_header">
         <a href="./eng/" id="lang_switch" aria-label="Naar het Engels">ENG</a>
         <h1>Het Van Gogh Museum</h1>
+        <h2 id="interactief-cta">
+          Bekijk onze interactieve route <br />
+          <a href="#interactiefAnchor" style="line-height: 20px;">
+            <svg viewBox="0 0 100 100" width="25">
+              <path
+                stroke="currentColor"
+                stroke-width="17"
+                stroke-linecap="round"
+                d="M50,10L50,90M10,50L50,90M50,90L90,50"
+              />
+            </svg>
+          </a>
+        </h2>
+        <h2 id="ticket-cta">
+          <a href="#ticketcontainer" style="line-height: 25px;">
+            Bestel Tickets
+            <svg
+              viewBox="0 0 100 100"
+              width="25"
+              style="vertical-align: middle;"
+            >
+              <path
+                stroke="currentColor"
+                stroke-width="17"
+                stroke-linecap="round"
+                d="M50,10L50,90M10,50L50,90M50,90L90,50"
+              />
+            </svg>
+          </a>
+        </h2>
       </div>
-      <a
-        href="#tentoonstellingAnchor"
-        aria-label="Knop naar beneden"
-        id="down_btn"
-      ></a>
     </header>
     <main class="page_content">
       <section
@@ -124,7 +149,7 @@
               alt="Twee vrouwen in het veen, Vincent van Gogh; 1883"
             /><img
               src="./img/tentoonstelling/verdieping_1/vangoghmuseum-s0003V1962-800.jpg"
-              alt="Het uitgaan van de hervromde kerk te Neuen, Vincent van Gogh; 1884-1885"
+              alt="Het uitgaan van de hervromde kerk te Nuenen, Vincent van Gogh; 1884-1885"
             /><img
               src="./img/tentoonstelling/verdieping_1/vangoghmuseum-s0052V1962-800.jpg"
               alt="Stilleven met koperen ketel en kruik, Vincent van Gogh; 1885"
@@ -144,7 +169,7 @@
             />
             <img
               src="./img/tentoonstelling/verdieping_1/vangoghmuseum-s0084V1962-800.jpg"
-              alt="Kop van een vrouw"
+              alt="Kop van een vrouw, Vincent van Gogh; 1885"
             /><img
               src="./img/tentoonstelling/verdieping_1/vangoghmuseum-s0141M1977-800.jpg"
               alt="Populierenlaan in de herfst, Vincent van Gogh; 1884"
@@ -544,31 +569,31 @@
           <button aria-label="vorige review" id="rev_prev"></button>
           <button aria-label="volgende review" id="rev_next"></button>
         </div>
-        <div class="ticketcontainer">
-          <p>
-            <span style="font-size: 2em;">
-              Bezoek ons museum
-            </span>
-            <br />
-            <a
-              href="https://tickets.vangoghmuseum.nl/?promo_creative=button&promo_pos=www-vgm&promo_name=tickets&promo_id=www-vgm-tickets-button"
-              target="_blank"
-              class="ticketbtn"
-              >Tickets<svg
-                viewBox="0 0 100 100"
-                height="30"
-                style="margin-left: 0.4rem; vertical-align: middle;"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-width="17"
-                  stroke-linecap="round"
-                  d="M10,50L90,50M50,10L90,50M50,90L90,50"
-                />
-              </svg>
-            </a>
-          </p>
-        </div>
+      </section>
+      <section id="ticketcontainer" style="border-bottom: 1rem;">
+        <p>
+          <span style="font-size: 2em;">
+            Bezoek het museum
+          </span>
+          <br />
+          <a
+            href="https://tickets.vangoghmuseum.nl/?promo_creative=button&promo_pos=www-vgm&promo_name=tickets&promo_id=www-vgm-tickets-button"
+            target="_blank"
+            class="ticketbtn"
+            >Tickets<svg
+              viewBox="0 0 100 100"
+              height="30"
+              style="margin-left: 0.4rem; vertical-align: middle;"
+            >
+              <path
+                stroke="currentColor"
+                stroke-width="17"
+                stroke-linecap="round"
+                d="M10,50L90,50M50,10L90,50M50,90L90,50"
+              />
+            </svg>
+          </a>
+        </p>
       </section>
     </main>
     <footer id="bottom_footer">
@@ -610,7 +635,7 @@
                 position: absolute;
                 top: 10px;
                 right: 20px;
-                font-size: 2rem;
+                font-size: 3rem;
                 user-select: none;
                 cursor: pointer;
                 z-index: 1;
@@ -650,5 +675,8 @@
     <script src="./js/reviews.js"></script>
     <script src="./js/tentoon.js"></script>
     <script src="./js/component.js"></script>
+    <script>
+      window.customElements.define("game-element", Game);
+    </script>
   </body>
 </html>

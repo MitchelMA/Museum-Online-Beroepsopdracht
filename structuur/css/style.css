@@ -57,6 +57,15 @@ button:hover {
   background-color: var(--main-content-btn-background-color);
   color: var(--main-content-btn-color);
 }
+button.inverted {
+  background-color: var(--main-content-btn-background-color);
+  color: var(--main-content-btn-color);
+}
+button.inverted.active,
+button.inverted:hover {
+  background-color: transparent;
+  color: var(--main-content-btn-background-color);
+}
 
 /* clearfix */
 .clearfix::before {
@@ -193,6 +202,54 @@ header#top_header h1 {
   color: #f9f9f9;
   font-size: 4.86rem;
   max-width: 306px;
+}
+header#top_header #interactief-cta {
+  font-size: 2.3rem;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: whitesmoke;
+  text-align: center;
+}
+header#top_header #interactief-cta a:hover,
+header#top_header #interactief-cta a.active {
+  color: #111;
+  background-color: var(--nav-background-color);
+}
+#interactief-cta a {
+  background-color: transparent;
+  color: var(--nav-background-color);
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 4px solid var(--nav-background-color);
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 250ms ease 0s, color 250ms ease 0s;
+}
+header#top_header #ticket-cta {
+  font-size: 1.7rem;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+header#top_header #ticket-cta a:hover,
+header#top_header #ticket-cta a.active {
+  color: #111;
+  background-color: var(--nav-background-color);
+}
+#ticket-cta a {
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--nav-background-color);
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 4px solid var(--nav-background-color);
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 250ms ease 0s, color 250ms ease 0s;
 }
 header#top_header #lang_switch {
   position: absolute;
@@ -378,6 +435,7 @@ article#geschiedenis_overlay.open {
   -moz-box-shadow: 3px 8px 12px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 3px 8px 12px rgba(0, 0, 0, 0.2);
   border-collapse: separate;
+  z-index: 1;
 }
 article#geschiedenis_overlay .close {
   position: absolute;
@@ -451,7 +509,7 @@ section#contactinformatie {
 /* reviews */
 .review_container {
   overflow: hidden;
-  height: 450px;
+  height: 650px;
   position: relative;
 }
 
@@ -559,7 +617,7 @@ footer#bottom_footer .inner_footer {
 }
 
 /* ticketverkoop knop */
-.ticketcontainer {
+#ticketcontainer {
   width: 100%;
   height: 200px;
   display: flex;
