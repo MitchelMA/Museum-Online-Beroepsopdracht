@@ -267,7 +267,7 @@
           </div>
           <div class="grid_item" id="slideshow_item"></div>
           <div class="grid_item span_2" id="inter">
-            interactief-item
+            <game-element id="game"></game-element>
           </div>
           <article id="geschiedenis_overlay" class="">
             <header id="overlay_header">
@@ -373,48 +373,18 @@
           </figure>
           <section class="data_section" style="text-align: right;">
             <h4>2022</h4>
-            <p><strong>1 januari 2022 (nieuwjaarsdag):</strong></p>
-            <ul>
-              <li>Zaterdag: open van 11:00 tot 18:00</li>
-            </ul>
-            <p><strong>2 tot en met 9 januari 2022:</strong></p>
-            <ul>
-              <li>Dagelijks: open van 09:00 tot 18:00</li>
-            </ul>
-            <p><strong>10 tot en met 16 januari 2022:</strong></p>
-            <ul>
-              <li>Maandag tot en met vrijdag: open van 10:00 tot 17:00</li>
-              <li>Zaterdag en zondag: open van 10:00 tot 18:00</li>
-            </ul>
-            <p><strong>17 januari tot en met 6 februari 2022:</strong></p>
-            <ul>
-              <li>Maandag: gesloten</li>
-              <li>Dinsdag tot en met donderdag: open van 10:00 tot 17:00</li>
-              <li>Vrijdag tot en met zondag: open van 10:00 tot 18:00</li>
-            </ul>
-            <p><strong>7 tot en met 18 februari 2022:</strong></p>
-            <ul>
-              <li>Maandag: gesloten</li>
-              <li>Dinsdag tot en met donderdag: open van 10:00 tot 17:00</li>
-              <li>Vrijdag tot en met zondag: open van 10:00 tot 18:00</li>
-            </ul>
-            <p><strong>19 tot en met 27 februari 2022:</strong></p>
-            <ul>
-              <li>Dagelijks: open van 09:00 tot 18:00</li>
-            </ul>
-            <p><strong>28 februari tot en met 6 maart 2022:</strong></p>
-            <ul>
-              <li>Maandag tot en met donderdag: open van 09:00 tot 17:00</li>
-              <li>
-                Vrijdag tot en met zondag: open van 09:00 tot en met 18:00
-              </li>
-            </ul>
-            <p><strong>7 tot en met 31 maart 2022:</strong></p>
-            <ul>
-              <li>Maandag tot en met donderdag: open van 09:00 tot 17:00</li>
-              <li>Vrijdag: open van 10:00 tot 21:00</li>
-              <li>Zaterdag en zondag: open van 10:00 tot 18:00</li>
-            </ul>
+            <p>
+              <strong>Maandag t/m donderdag</strong><br />
+              Van 09:00 tot 17:00
+            </p>
+            <p>
+              <strong>Vrijdag</strong><br />
+              Van 10:00 tot 21:00
+            </p>
+            <p>
+              <strong>Zaterdag en Zondag</strong><br />
+              Van 10:00 tot 18:00
+            </p>
           </section>
           <br style="clear: left;" />
         </div>
@@ -575,24 +545,29 @@
           <button aria-label="volgende review" id="rev_next"></button>
         </div>
         <div class="ticketcontainer">
-          <a
-            href="https://tickets.vangoghmuseum.nl/?promo_creative=button&promo_pos=www-vgm&promo_name=tickets&promo_id=www-vgm-tickets-button"
-            target="_blank"
-            class="ticketbtn"
-            style="line-height: 72.6px;"
-            >Tickets<svg
-              viewBox="0 0 100 100"
-              height="30"
-              style="margin-left: 0.4rem;"
-            >
-              <path
-                stroke="currentColor"
-                stroke-width="17"
-                stroke-linecap="round"
-                d="M10,50L90,50M50,10L90,50M50,90L90,50"
-              />
-            </svg>
-          </a>
+          <p>
+            <span style="font-size: 2em;">
+              Bezoek ons museum
+            </span>
+            <br />
+            <a
+              href="https://tickets.vangoghmuseum.nl/?promo_creative=button&promo_pos=www-vgm&promo_name=tickets&promo_id=www-vgm-tickets-button"
+              target="_blank"
+              class="ticketbtn"
+              >Tickets<svg
+                viewBox="0 0 100 100"
+                height="30"
+                style="margin-left: 0.4rem; vertical-align: middle;"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-width="17"
+                  stroke-linecap="round"
+                  d="M10,50L90,50M50,10L90,50M50,90L90,50"
+                />
+              </svg>
+            </a>
+          </p>
         </div>
       </section>
     </main>
@@ -613,7 +588,67 @@
       </button>
       <img id="bigTentoonImg" src="./img/placeholder.jpg" alt="" />
     </section>
+
+    <!-- templates voor de interactieve route -->
+    <template id="game_template">
+      <link rel="stylesheet" href="./css/route/game.css" />
+      <main class="body">
+        <div class="map" id="slots-container">
+          <section class="floor_selection">
+            <button id="previous_floor"></button>
+            <slot name="floor_list" id="floor_list"></slot>
+            <button id="next_floor"></button>
+          </section>
+          <slot name="map" id="map-slot"></slot>
+          <slot name="point" id="point_overlay"></slot>
+        </div>
+        <div id="text_overlay" class="point_data_overlay" hidden>
+          <section class="inner">
+            <div
+              id="closebtn"
+              style="
+                position: absolute;
+                top: 10px;
+                right: 20px;
+                font-size: 2rem;
+                user-select: none;
+                cursor: pointer;
+                z-index: 1;
+              "
+              onclick="this.parentNode.parentNode.setAttribute('hidden', 'true');"
+            >
+              &times;
+            </div>
+            <button class="back"></button>
+            <button class="next"></button>
+            <h1 id="name">Point-1</h1>
+            <div class="content">
+              <aside id="cover_img_con">
+                <img src="" alt="" id="cover_img" />
+              </aside>
+              <article id="main_point_content"></article>
+            </div>
+          </section>
+        </div>
+      </main>
+    </template>
+
+    <template id="pop-template">
+      <link rel="stylesheet" href="./css/route/pop.css" />
+      <section class="content">
+        <div id="point">
+          <slot name="small-point"></slot>
+        </div>
+        <section id="popup">
+          <slot name="back_img" id="back_img"></slot>
+          <div class="text-con">
+            <slot name="short_text" id="short"></slot>
+          </div>
+        </section>
+      </section>
+    </template>
     <script src="./js/reviews.js"></script>
     <script src="./js/tentoon.js"></script>
+    <script src="./js/component.js"></script>
   </body>
 </html>

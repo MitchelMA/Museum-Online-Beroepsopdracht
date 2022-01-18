@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  height: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+
+  .map {
+    width: auto;
+    height: 100%;
+    margin: auto;
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .map .floor_selection {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(230, 230, 230, 1);
+    padding: 0.3rem 0.7rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    font-size: 1.2rem;
+
+    #previous_floor,
+    #next_floor {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      cursor: pointer;
+      &.hidden {
+        pointer-events: none;
+        &::after {
+          border-color: transparent !important;
+        }
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        transform: rotate(45deg);
+      }
+    }
+    #previous_floor::after {
+      border-bottom: 3px solid black;
+      border-left: 3px solid black;
+    }
+    #next_floor::after {
+      border-top: 3px solid black;
+      border-right: 3px solid black;
+    }
+
+    #floor_list {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 160px;
+      overflow: hidden;
+      &::slotted(span) {
+        position: relative;
+        min-width: 160px;
+        max-width: 160px;
+        text-align: center;
+        transition: left 250ms cubic-bezier(0, 0, 0, 1) 0s;
+      }
+    }
+  }
+
+  #map-slot::slotted(img) {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  #point_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #point_overlay::slotted(.point) {
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .point_data_overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(245, 245, 245, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    .inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1rem;
+      overflow: hidden;
+
+      .content {
+        display: flex;
+        height: 80%;
+        width: 80%;
+        margin: 0 auto;
+        overflow: auto;
+
+        aside#cover_img_con {
+          width: 25%;
+          height: 100%;
+          position: sticky;
+          top: 0;
+          padding: 1rem;
+
+          img {
+            max-width: 100%;
+          }
+        }
+        article#main_point_content {
+          width: 100%;
+          max-width: 65%;
+          margin: 0 auto;
+
+          section {
+            width: 100%;
+            display: flex;
+            margin-bottom: 4rem;
+
+            &:nth-child(even) {
+              flex-flow: row-reverse;
+              text-align: right;
+            }
+
+            p {
+              flex: 1;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            img {
+              flex: 0;
+              max-height: 200px;
+              max-width: 250px;
+            }
+          }
+        }
+      }
+
+      #content-img {
+        height: auto;
+        max-width: 20%;
+        max-height: 50%;
+      }
+      #text-content {
+        max-width: 40%;
+      }
+      .back {
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        transform: translateY(-50%);
+        z-index: 1;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: none;
+
+        &::before {
+          content: "";
+          display: block;
+          width: 15px;
+          height: 15px;
+          border-left: 3px solid black;
+          border-bottom: 3px solid black;
+          transform: rotate(45deg);
+        }
+      }
+      .next {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        z-index: 1;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: none;
+
+        &::before {
+          content: "";
+          display: block;
+          width: 15px;
+          height: 15px;
+          border-top: 3px solid black;
+          border-right: 3px solid black;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
