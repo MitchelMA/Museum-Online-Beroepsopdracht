@@ -229,7 +229,7 @@ header#top_header #interactief-cta a.active {
   transition: background-color 250ms ease 0s, color 250ms ease 0s;
 }
 header#top_header #ticket-cta {
-  font-size: 1.7rem;
+  font-size: 2.3rem;
   position: absolute;
   right: 20px;
   bottom: 20px;
@@ -414,6 +414,7 @@ section#interactief {
   height: 100%;
   align-self: center;
   justify-self: center;
+  transition: padding-top 250ms ease 0s;
 }
 
 article#geschiedenis_overlay {
@@ -509,7 +510,7 @@ section#contactinformatie {
 /* reviews */
 .review_container {
   overflow: hidden;
-  height: 650px;
+  height: 560px;
   position: relative;
 }
 

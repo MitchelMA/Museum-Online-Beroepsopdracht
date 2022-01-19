@@ -285,7 +285,7 @@
             </p>
             <button
               style="font-size: 1.3rem; margin-top: 1rem;"
-              onclick="document.getElementById('geschiedenis_overlay').classList.add('open');"
+              onclick="openGes();"
             >
               klik hier voor meer
             </button>
@@ -298,11 +298,7 @@
             <header id="overlay_header">
               <h3>Geschiedenis</h3>
             </header>
-            <button
-              class="close"
-              aria-label="sluitknop"
-              onclick="this.parentElement.classList.remove(`open`);"
-            >
+            <button class="close" aria-label="sluitknop" onclick="closeGes();">
               &times;
             </button>
             <div id="overlay_text">
@@ -570,7 +566,10 @@
           <button aria-label="volgende review" id="rev_next"></button>
         </div>
       </section>
-      <section id="ticketcontainer" style="border-bottom: 1rem;">
+      <section
+        id="ticketcontainer"
+        style="border-bottom: 1rem; margin-top: 2rem;"
+      >
         <p>
           <span style="font-size: 2em;">
             Bezoek het museum
@@ -610,7 +609,7 @@
       </section>
     </footer>
     <!-- modal overlay wanneer er wordt gedrukt op een tentoonstelling werkstuk -->
-    <section id="bigTentoon" class="">
+    <section id="bigTentoon" class="" onclick="closeOverlay();">
       <button aria-label="sluitknop" class="close" onclick="closeOverlay();">
         &times;
       </button>
@@ -680,6 +679,30 @@
     <script src="./js/component.js"></script>
     <script>
       window.customElements.define("game-element", Game);
+
+      // script voor de geschiedenis text
+      function openGes() {
+        document.getElementById("geschiedenis_overlay").classList.add("open");
+        document.getElementById("inter").style.paddingTop = `${
+          document.getElementById("geschiedenis_overlay").clientHeight / 2 - 100
+        }px`;
+        if (document.documentElement.clientWidth <= 1060) {
+          document.getElementById("inter").style.paddingTop = `${
+            document.getElementById("geschiedenis_overlay").clientHeight / 2 +
+            50
+          }px`;
+        }
+        if (document.documentElement.clientWidth <= 650) {
+          document.getElementById("inter").style.paddingTop = "";
+        }
+      }
+
+      function closeGes() {
+        document
+          .getElementById("geschiedenis_overlay")
+          .classList.remove("open");
+        document.getElementById("inter").style.paddingTop = "";
+      }
     </script>
   </body>
 </html>
