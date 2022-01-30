@@ -415,6 +415,7 @@ section#interactief {
   align-self: center;
   justify-self: center;
   transition: padding-top 250ms ease 0s;
+  position: relative;
 }
 
 article#geschiedenis_overlay {
