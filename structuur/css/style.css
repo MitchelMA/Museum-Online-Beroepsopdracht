@@ -751,6 +751,17 @@ footer#bottom_footer .inner_footer {
   .inner_nav #nav-burger {
     display: flex;
   }
+
+  .nav_links > .nav_item {
+    display: flex;
+  }
+  .nav_item > a {
+    display: flex;
+    height: unset;
+    line-height: unset;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 650px) {
